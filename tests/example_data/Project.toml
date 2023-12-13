@@ -1,0 +1,8 @@
+name = "Example_Julia_Project"
+uuid = "d9c4a96b-6299-43f5-9d34-05b6b65b3224"
+authors = ["author <author@email.com>"]
+version = "0.1.0"
+
+[deps]
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"

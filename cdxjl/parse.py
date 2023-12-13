@@ -17,15 +17,15 @@ class parser:
         self.project_path =  os.path.join(path, "Project.toml")
         if os.path.isdir(path) is False:
             print(f"Could not find project {path}. No file or directory found.")
-            exit(1)
+            exit(-1)
         
         elif os.path.isfile(self.manifest_path) is False:
             print("Error, no Manifest.toml found")
-            exit(1)
+            exit(-1)
         
         elif os.path.isfile(self.project_path) is False:
             print("Error, no Project.toml found")
-            exit(1)
+            exit(-1)
 
         else:
             print("Analyzing project...")
@@ -47,17 +47,3 @@ class parser:
         return project_data, manifest_data
 
 
-
-
-
-# fullpath = "/home/richard/code/NewJuliaProject"
-# # path = "/home/richard/code/NewJuliaProject/Project.toml"
-# # path2 = "/home/richard/code/NewJuliaProject/Manifest.toml"
-
-# parse = parser(fullpath)
-
-# proj_data, manifest_data = parse.get_julia_data()
-
-# for key, value in manifest_data.items():
-#     if key == "AbstractFFTs":
-#         print(value[0])
